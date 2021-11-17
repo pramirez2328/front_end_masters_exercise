@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Pet from "./Pet";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile", "cat"];
 
 function SearchParams() {
@@ -50,6 +51,7 @@ function SearchParams() {
 
         <button>submit</button>
       </form>
+      <Pet name="dog" animal="canino" breed="pastor aleman" />
     </div>
   );
 }

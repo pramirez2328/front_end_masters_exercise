@@ -1,3 +1,5 @@
+import React from "react";
+
 const Pet = ({ name, animal, breed }) => {
   return (
     <div>
