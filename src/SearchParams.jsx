@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Pet from "./Pet";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile", "cat"];
 
+//hello
+
 function SearchParams() {
   const [city, setCity] = useState("");
   const [animal, updateAnimal] = useState("");
