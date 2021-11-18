@@ -1,32 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Pet from "./Pet";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile", "cat"];
 
 function SearchParams() {
-  const [location, setLocation] = useState("");
+  const [city, setCity] = useState("");
   const [animal, updateAnimal] = useState("");
 
+  async function getPets() {
+    const pets = await fetch(
+      `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${city}`
+    );
+
+    const petsJson = await pets.json();
+    console.log(petsJson);
+  }
+
+  useEffect(() => {
+    getPets();
+  }, [animal, city]);
+
   const handleLocation = (e) => {
-    setLocation(e.target.value);
+    setCity(e.target.value);
   };
 
   const handleForm = (e) => {
     e.preventDefault();
-    setLocation("");
+    setCity("");
     updateAnimal("");
   };
 
   return (
     <div className="search-params">
       <form onSubmit={handleForm}>
-        <label htmlFor="location">
+        <label htmlFor="city">
           Location
-          <input
-            type="text"
-            id="location"
-            value={location}
-            onChange={handleLocation}
-          />
+          <input type="text" id="city" value={city} onChange={handleLocation} />
         </label>
 
         <label htmlFor="animal">
@@ -35,11 +43,9 @@ function SearchParams() {
             id="animal"
             value={animal}
             onChange={(e) => updateAnimal(e.target.value)}
-            onBlur={(e) => updateAnimal(e.target.value)}
           >
             <option />
             {ANIMALS.map((animal, i) => {
-              console.log(`${animal}-${i}`);
               return (
                 <option key={`${animal}-${i}`} value={animal}>
                   {animal}
