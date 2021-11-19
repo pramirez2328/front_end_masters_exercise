@@ -2,19 +2,19 @@ import React, { useEffect, useState } from "react";
 import Pet from "./Pet";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile", "cat"];
 
-//hello
-
 function SearchParams() {
   const [city, setCity] = useState("");
-  const [animal, updateAnimal] = useState("");
+  const [animal, setAnimal] = useState("");
+  const [pets, setPets] = useState([]);
 
   async function getPets() {
-    const pets = await fetch(
+    const petsResponse = await fetch(
       `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${city}`
     );
 
-    const petsJson = await pets.json();
-    console.log(petsJson);
+    const petsJson = await petsResponse.json();
+    setPets(petsJson.pets);
+    console.log(pets);
   }
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function SearchParams() {
   const handleForm = (e) => {
     e.preventDefault();
     setCity("");
-    updateAnimal("");
+    setAnimal("");
   };
 
   return (
@@ -44,22 +44,39 @@ function SearchParams() {
           <select
             id="animal"
             value={animal}
-            onChange={(e) => updateAnimal(e.target.value)}
+            onChange={(e) => setAnimal(e.target.value)}
           >
             <option />
-            {ANIMALS.map((animal, i) => {
+            {ANIMALS.map((item, i) => {
               return (
-                <option key={`${animal}-${i}`} value={animal}>
-                  {animal}
+                <option key={`${item}-${i}`} value={item}>
+                  {item}
                 </option>
               );
             })}
           </select>
         </label>
 
-        <button>submit</button>
+        <button>Clear</button>
       </form>
-      <Pet name="dog" animal="canino" breed="pastor aleman" />
+
+      {pets.map((anim) => {
+        return (
+          <>
+            <Pet
+              key={anim.id}
+              type={anim.animal}
+              city={anim.city}
+              breed={anim.breed}
+              description={anim.description}
+              image={anim.images[0]}
+              name={anim.name}
+              state={anim.state}
+            />
+            <hr id="line" />
+          </>
+        );
+      })}
     </div>
   );
 }
