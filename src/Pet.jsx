@@ -2,9 +2,23 @@ import React from "react";
 
 const Pet = ({ type, city, breed, description, image, name, state }) => {
   return (
-    <div class="listOfPets">
-      <div>
-        <h1 style={{ fontFamily: "cursive", color: "#ad343e" }}>
+    <div
+      className="listOfPets"
+      style={{
+        backgroundColor: "white",
+        margin: "1em",
+        padding: "0.5em",
+        border: "solid 1px #ad343e",
+        borderRadius: "7px",
+      }}
+    >
+      <div className="info">
+        <h1
+          style={{
+            fontFamily: "cursive",
+            color: "#ad343e",
+          }}
+        >
           Name: {name}
         </h1>
         <h3>
@@ -13,10 +27,11 @@ const Pet = ({ type, city, breed, description, image, name, state }) => {
         <h3>
           City: {city}, {state}
         </h3>
-        <h4>{description}</h4>
+        <h3 style={{ marginBottom: "2px" }}>Description:</h3>
+        <h5 style={{ marginTop: "0" }}>{description}</h5>
       </div>
 
-      <img src={image} style={{ width: "400px", height: "300px" }} />
+      <img src={image} style={{ width: "500px", height: "300px" }} />
     </div>
   );
 };

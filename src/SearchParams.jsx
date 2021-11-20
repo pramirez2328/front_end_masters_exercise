@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Pet from "./Pet";
-const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile", "cat"];
+const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 function SearchParams() {
   const [city, setCity] = useState("");
@@ -62,9 +62,8 @@ function SearchParams() {
 
       {pets.map((anim) => {
         return (
-          <>
+          <div key={`animal-${anim.id}`}>
             <Pet
-              key={anim.id}
               type={anim.animal}
               city={anim.city}
               breed={anim.breed}
@@ -74,7 +73,7 @@ function SearchParams() {
               state={anim.state}
             />
             <hr id="line" />
-          </>
+          </div>
         );
       })}
     </div>

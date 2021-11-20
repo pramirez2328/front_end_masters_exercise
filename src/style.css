@@ -29,6 +29,10 @@ body {
   justify-content: space-between;
 }
 
+.info {
+  margin-right: 2em;
+}
+
 .search-params form {
   border-radius: 6px;
   background: #faeff0;
