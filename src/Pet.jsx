@@ -31,7 +31,7 @@ const Pet = ({ type, city, breed, description, image, name, state }) => {
         <h5 style={{ marginTop: "0" }}>{description}</h5>
       </div>
 
-      <img src={image} style={{ width: "500px", height: "300px" }} />
+      <img src={image} className="image" />
     </div>
   );
 };
