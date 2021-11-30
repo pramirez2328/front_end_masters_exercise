@@ -8,25 +8,22 @@ function SearchParams() {
   const [pets, setPets] = useState([]);
 
   async function getPets() {
+    console.log("ren=der");
     const petsResponse = await fetch(
       `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${city}`
     );
 
     const petsJson = await petsResponse.json();
     setPets(petsJson.pets);
-    console.log(pets);
   }
 
   useEffect(() => {
     getPets();
-  }, [animal, city]);
-
-  const handleLocation = (e) => {
-    setCity(e.target.value);
-  };
+  }, []);
 
   const handleForm = (e) => {
     e.preventDefault();
+    getPets();
     setCity("");
     setAnimal("");
   };
@@ -36,7 +33,12 @@ function SearchParams() {
       <form onSubmit={handleForm}>
         <label htmlFor="city">
           Location
-          <input type="text" id="city" value={city} onChange={handleLocation} />
+          <input
+            type="text"
+            id="city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
         </label>
 
         <label htmlFor="animal">
@@ -57,7 +59,7 @@ function SearchParams() {
           </select>
         </label>
 
-        <button>Clear</button>
+        <button>Submit</button>
       </form>
 
       {pets.map((anim) => {
