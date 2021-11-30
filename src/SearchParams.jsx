@@ -8,7 +8,6 @@ function SearchParams() {
   const [pets, setPets] = useState([]);
 
   async function getPets() {
-    console.log("ren=der");
     const petsResponse = await fetch(
       `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${city}`
     );
