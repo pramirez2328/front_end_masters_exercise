@@ -5,6 +5,7 @@ const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 function SearchParams() {
   const [city, setCity] = useState("");
   const [animal, setAnimal] = useState("");
+  const [breed, setBreed] = useState([]);
   const [pets, setPets] = useState([]);
 
   async function getPets() {
@@ -49,6 +50,25 @@ function SearchParams() {
           >
             <option />
             {ANIMALS.map((item, i) => {
+              return (
+                <option key={`${item}-${i}`} value={item}>
+                  {item}
+                </option>
+              );
+            })}
+          </select>
+        </label>
+
+        <label htmlFor="breed">
+          Breed
+          <select
+            multiple={true}
+            id="breed"
+            value={breed}
+            onChange={(e) => setBreed(e.target.value)}
+          >
+            <option />
+            {breed.map((item, i) => {
               return (
                 <option key={`${item}-${i}`} value={item}>
                   {item}
