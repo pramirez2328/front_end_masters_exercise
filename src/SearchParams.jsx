@@ -5,7 +5,7 @@ const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 function SearchParams() {
   const [city, setCity] = useState("");
   const [animal, setAnimal] = useState("");
-  const [breed, setBreed] = useState("");
+  const [breed, setBreed] = useState([]);
   const [pets, setPets] = useState([]);
 
   async function getPets() {
