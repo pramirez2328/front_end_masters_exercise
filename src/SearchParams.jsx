@@ -5,12 +5,12 @@ const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 function SearchParams() {
   const [city, setCity] = useState("");
   const [animal, setAnimal] = useState("");
-  const [breed, setBreed] = useState([]);
+  const [breed, setBreed] = useState("");
   const [pets, setPets] = useState([]);
 
   async function getPets() {
     const petsResponse = await fetch(
-      `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${city}`
+      `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${city}&breed=${breed}`
     );
 
     const petsJson = await petsResponse.json();
@@ -27,7 +27,7 @@ function SearchParams() {
     setCity("");
     setAnimal("");
   };
-
+  console.log(pets);
   return (
     <div className="search-params">
       <form onSubmit={handleForm}>
@@ -41,7 +41,7 @@ function SearchParams() {
           />
         </label>
 
-        <label htmlFor="animal">
+        {/* <label htmlFor="animal">
           Animal
           <select
             id="animal"
@@ -57,18 +57,17 @@ function SearchParams() {
               );
             })}
           </select>
-        </label>
+        </label> */}
 
         <label htmlFor="breed">
           Breed
           <select
-            multiple={true}
             id="breed"
             value={breed}
             onChange={(e) => setBreed(e.target.value)}
           >
             <option />
-            {breed.map((item, i) => {
+            {ANIMALS.map((item, i) => {
               return (
                 <option key={`${item}-${i}`} value={item}>
                   {item}
