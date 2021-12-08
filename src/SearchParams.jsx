@@ -41,7 +41,7 @@ function SearchParams() {
           />
         </label>
 
-        {/* <label htmlFor="animal">
+        <label htmlFor="animal">
           Animal
           <select
             id="animal"
@@ -57,7 +57,7 @@ function SearchParams() {
               );
             })}
           </select>
-        </label> */}
+        </label>
 
         <label htmlFor="breed">
           Breed
