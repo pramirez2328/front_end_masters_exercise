@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Pet from "./Pet";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
+const BREED = [
+  "Havanase",
+  "Goldendoodle",
+  "Boxer",
+  "Wheaten Terrier",
+  "Cockatoo",
+  "Horned Lizard",
+];
 
 function SearchParams() {
   const [city, setCity] = useState("");
   const [animal, setAnimal] = useState("");
-  const [breed, setBreed] = useState([]);
+  const [breed, setBreed] = useState("");
   const [pets, setPets] = useState([]);
 
   async function getPets() {
@@ -26,8 +34,9 @@ function SearchParams() {
     getPets();
     setCity("");
     setAnimal("");
+    setBreed("");
   };
-  console.log(pets);
+
   return (
     <div className="search-params">
       <form onSubmit={handleForm}>
@@ -67,7 +76,7 @@ function SearchParams() {
             onChange={(e) => setBreed(e.target.value)}
           >
             <option />
-            {ANIMALS.map((item, i) => {
+            {BREED.map((item, i) => {
               return (
                 <option key={`${item}-${i}`} value={item}>
                   {item}
