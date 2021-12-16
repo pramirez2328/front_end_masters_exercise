@@ -91,7 +91,7 @@ function SearchParams() {
 
       {pets.map((anim) => {
         return (
-          <div key={`animal-${anim.id}`}>
+          <div key={`pet-${anim.id}`}>
             <Pet
               type={anim.animal}
               city={anim.city}
