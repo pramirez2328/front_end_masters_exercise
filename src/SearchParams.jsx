@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Pet from "./Pet";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
-import useBreedlist from "./useBreedList";
-
+import useBreedList from "./useBreedList";
+console.log(useBreedList);
 function SearchParams() {
   const [city, setCity] = useState("");
   const [animal, setAnimal] = useState("");
@@ -27,7 +27,6 @@ function SearchParams() {
     getPets();
     setCity("");
     setAnimal("");
-    setBreed("");
   };
 
   return (
