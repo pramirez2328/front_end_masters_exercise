@@ -1,5 +1,5 @@
 import React from "react";
-//pet
+
 const Pet = ({ type, city, breed, description, image, name, state }) => {
   return (
     <div

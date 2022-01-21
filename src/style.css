@@ -54,10 +54,9 @@ body {
   border-radius: 6px;
   background: #faeff0;
   box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
-  width: 715px;
+  width: 100%;
   padding: 15px;
-  float: left;
-  margin-bottom: 25px;
+  margin: 1.5rem 0;
 }
 
 .details {
