@@ -1,5 +1,7 @@
-# Pet Application
+**# - Pet Application**
 
-## 2021 - present
+_## 2021 - present_
 
 ## Front Masters
+
+![This is the main screenshot]('./pet_picture.png')
