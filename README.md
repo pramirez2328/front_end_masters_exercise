@@ -1,4 +1,4 @@
-**# - Pet Application**
+# - Pet Application
 
 ## 2021 - present
 
