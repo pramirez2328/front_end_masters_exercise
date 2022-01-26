@@ -1,6 +1,7 @@
 import React from "react";
 
 const Pet = ({ type, city, breed, description, image, name, state }) => {
+  image ? image : (image = "http://pets-images.dev-apis.com/pets/none.jpg");
   return (
     <div
       className="listOfPets"

@@ -11,11 +11,8 @@ body {
 }
 
 .search-params {
-  width: 1100px;
+  width: 80%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #line {
@@ -47,16 +44,19 @@ body {
   width: 360px;
   margin: 0px 25px 0px 0px;
   padding: 35px 15px 15px 15px;
-  float: left;
+  height: 21rem;
+  position: fixed;
+  top: 7.5rem;
 }
 
 .search {
+  width: 70% !important;
+  float: right;
   border-radius: 6px;
   background: #faeff0;
   box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
-  width: 100%;
+  margin-top: 0;
   padding: 15px;
-  margin: 1.5rem 0;
 }
 
 .details {
@@ -198,11 +198,6 @@ header {
   opacity: 0.6;
 }
 
-.search-params label {
-  display: block;
-  width: 60px;
-}
-
 .search-params input,
 .search-params select {
   margin-bottom: 30px;
@@ -282,18 +277,6 @@ header {
     width: 95%;
   }
 
-  .search-params form {
-    margin-bottom: 20px;
-  }
-
-  .search {
-    width: 55%;
-    padding: 15px;
-    border-radius: 9px;
-    float: left;
-    margin-bottom: 25px;
-  }
-
   .details {
     width: 95%;
     margin: 0 auto;
@@ -340,12 +323,6 @@ header {
     width: 100%;
     text-align: center;
     margin: 1em;
-  }
-
-  .listOfPets {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .image {

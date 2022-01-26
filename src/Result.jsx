@@ -1,6 +1,10 @@
 import React from "react";
 import Pet from "./Pet";
 function Result({ pets }) {
+  if (pets.length === 0) {
+    return <h1 className="search">Sorry, there are no pets, search again!</h1>;
+  }
+
   return (
     <div className="search">
       {pets.map((anim) => {
