@@ -8,7 +8,7 @@ function SearchParams() {
   const [breeds] = useBreedList(animal);
   const [breed, setBreed] = useState("");
   const [pets, setPets] = useState([]);
-
+  console.log("hey");
   async function getPets() {
     const petsResponse = await fetch(
       `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${city}&breed=${breed}`
