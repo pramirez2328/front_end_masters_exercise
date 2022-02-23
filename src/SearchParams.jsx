@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Result from "./Result";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 import useBreedList from "./useBreedList";
@@ -30,58 +31,60 @@ function SearchParams() {
   };
 
   return (
-    <div className="search-params">
-      <form onSubmit={handleForm}>
-        <label htmlFor="city">
-          Location
-          <input
-            type="text"
-            id="city"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-        </label>
+    <>
+      <div className="search-params">
+        <form onSubmit={handleForm}>
+          <label htmlFor="city">
+            Location
+            <input
+              type="text"
+              id="city"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="animal">
-          Animal
-          <select
-            id="animal"
-            value={animal}
-            onChange={(e) => setAnimal(e.target.value)}
-          >
-            <option />
-            {ANIMALS.map((item, i) => {
-              return (
-                <option key={`${item}-${i}`} value={item}>
-                  {item}
-                </option>
-              );
-            })}
-          </select>
-        </label>
+          <label htmlFor="animal">
+            Animal
+            <select
+              id="animal"
+              value={animal}
+              onChange={(e) => setAnimal(e.target.value)}
+            >
+              <option />
+              {ANIMALS.map((item, i) => {
+                return (
+                  <option key={`${item}-${i}`} value={item}>
+                    {item}
+                  </option>
+                );
+              })}
+            </select>
+          </label>
 
-        <label htmlFor="breed">
-          Breed
-          <select
-            id="breed"
-            value={breed}
-            onChange={(e) => setBreed(e.target.value)}
-          >
-            <option />
-            {breeds.map((item, i) => {
-              return (
-                <option key={`${item}-${i}`} value={item}>
-                  {item}
-                </option>
-              );
-            })}
-          </select>
-        </label>
+          <label htmlFor="breed">
+            Breed
+            <select
+              id="breed"
+              value={breed}
+              onChange={(e) => setBreed(e.target.value)}
+            >
+              <option />
+              {breeds.map((item, i) => {
+                return (
+                  <option key={`${item}-${i}`} value={item}>
+                    {item}
+                  </option>
+                );
+              })}
+            </select>
+          </label>
 
-        <button>Submit</button>
-      </form>
-      {<Result pets={pets} />}
-    </div>
+          <button>Submit</button>
+        </form>
+        {<Result pets={pets} />}
+      </div>
+    </>
   );
 }
 export default SearchParams;
