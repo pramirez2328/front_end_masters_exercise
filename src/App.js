@@ -9,9 +9,15 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Link to="details/:1">
-          <h1>Adopt Me!</h1>
-        </Link>
+        <div id="nav_links">
+          <Link to="/">
+            <h1>Home</h1>
+          </Link>
+          <Link to="details/:1">
+            <h1>History</h1>
+          </Link>
+        </div>
+
         <Switch>
           <Route path="/details/:1">
             <Details />

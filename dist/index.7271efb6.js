@@ -1018,16 +1018,39 @@ const App = ()=>{
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
             children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                    to: "details/:1",
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                        children: "Adopt Me!"
-                    }, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 13,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                    id: "nav_links",
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: "/",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 14,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 13,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: "details/:1",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                                children: "History"
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 17,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/App.js",
                     lineNumber: 12,
                     columnNumber: 9
@@ -1039,12 +1062,12 @@ const App = ()=>{
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_detailsDefault.default, {
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 17,
+                                lineNumber: 23,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 16,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1052,18 +1075,18 @@ const App = ()=>{
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_searchParamsDefault.default, {
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 20,
+                                lineNumber: 26,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 19,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 15,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -1083,12 +1106,12 @@ _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_react.Stric
     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 30,
+        lineNumber: 36,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 29,
+    lineNumber: 35,
     columnNumber: 3
 }, undefined), document.getElementById("root"));
 var _c;
