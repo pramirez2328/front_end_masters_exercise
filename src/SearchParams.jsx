@@ -33,7 +33,10 @@ function SearchParams() {
   return (
     <>
       <div className="search-params">
-        <form onSubmit={handleForm}>
+        <form
+          onSubmit={handleForm}
+          style={{ position: "fixed", top: "6.5rem" }}
+        >
           <label htmlFor="city">
             Location
             <input

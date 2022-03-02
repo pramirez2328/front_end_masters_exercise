@@ -7,7 +7,6 @@ const Pet = ({ type, city, breed, description, image, name, state }) => {
       className="listOfPets"
       style={{
         backgroundColor: "white",
-        margin: "1em",
         padding: "0.5em",
         border: "solid 1px #ad343e",
         borderRadius: "7px",

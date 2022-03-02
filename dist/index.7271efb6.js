@@ -1015,38 +1015,54 @@ var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _searchParams = require("./SearchParams");
 var _searchParamsDefault = parcelHelpers.interopDefault(_searchParams);
 const App = ()=>{
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                    id: "nav_links",
+                    style: {
+                        display: "flex",
+                        justifyContent: "flex-start",
+                        backgroundColor: "rgb(228, 225, 225)",
+                        position: "fixed",
+                        top: "0",
+                        width: "100%",
+                        margin: "0"
+                    },
                     children: [
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/",
+                            style: {
+                                textDecoration: "none",
+                                marginLeft: "2rem"
+                            },
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 14,
+                                lineNumber: 30,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 13,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "details/:1",
+                            style: {
+                                marginLeft: "2rem",
+                                textDecoration: "none"
+                            },
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                                 children: "History"
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 17,
+                                lineNumber: 39,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 16,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -1062,12 +1078,12 @@ const App = ()=>{
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_detailsDefault.default, {
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 23,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 22,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1075,18 +1091,18 @@ const App = ()=>{
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_searchParamsDefault.default, {
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 26,
+                                lineNumber: 48,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 25,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 21,
+                    lineNumber: 43,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -1095,23 +1111,19 @@ const App = ()=>{
             lineNumber: 11,
             columnNumber: 7
         }, undefined)
-    }, void 0, false, {
-        fileName: "src/App.js",
-        lineNumber: 10,
-        columnNumber: 5
-    }, undefined));
+    }, void 0, false));
 };
 _c = App;
 _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_react.StrictMode, {
     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 36,
+        lineNumber: 58,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 35,
+    lineNumber: 57,
     columnNumber: 3
 }, undefined), document.getElementById("root"));
 var _c;
@@ -22920,6 +22932,10 @@ function SearchParams() {
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
                     onSubmit: handleForm,
+                    style: {
+                        position: "fixed",
+                        top: "6.5rem"
+                    },
                     children: [
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
                             htmlFor: "city",
@@ -22932,13 +22948,13 @@ function SearchParams() {
                                     onChange: (e)=>setCity(e.target.value)
                                 }, void 0, false, {
                                     fileName: "src/SearchParams.jsx",
-                                    lineNumber: 39,
+                                    lineNumber: 42,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/SearchParams.jsx",
-                            lineNumber: 37,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
@@ -22954,7 +22970,7 @@ function SearchParams() {
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
                                         }, void 0, false, {
                                             fileName: "src/SearchParams.jsx",
-                                            lineNumber: 54,
+                                            lineNumber: 57,
                                             columnNumber: 15
                                         }, this),
                                         ANIMALS.map((item, i)=>{
@@ -22963,20 +22979,20 @@ function SearchParams() {
                                                 children: item
                                             }, `${item}-${i}`, false, {
                                                 fileName: "src/SearchParams.jsx",
-                                                lineNumber: 57,
+                                                lineNumber: 60,
                                                 columnNumber: 19
                                             }, this));
                                         })
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/SearchParams.jsx",
-                                    lineNumber: 49,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/SearchParams.jsx",
-                            lineNumber: 47,
+                            lineNumber: 50,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
@@ -22992,7 +23008,7 @@ function SearchParams() {
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
                                         }, void 0, false, {
                                             fileName: "src/SearchParams.jsx",
-                                            lineNumber: 72,
+                                            lineNumber: 75,
                                             columnNumber: 15
                                         }, this),
                                         breeds.map((item, i)=>{
@@ -23001,27 +23017,27 @@ function SearchParams() {
                                                 children: item
                                             }, `${item}-${i}`, false, {
                                                 fileName: "src/SearchParams.jsx",
-                                                lineNumber: 75,
+                                                lineNumber: 78,
                                                 columnNumber: 19
                                             }, this));
                                         })
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/SearchParams.jsx",
-                                    lineNumber: 67,
+                                    lineNumber: 70,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/SearchParams.jsx",
-                            lineNumber: 65,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
                             children: "Submit"
                         }, void 0, false, {
                             fileName: "src/SearchParams.jsx",
-                            lineNumber: 83,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, this)
                     ]
@@ -23034,7 +23050,7 @@ function SearchParams() {
                     pets: pets
                 }, void 0, false, {
                     fileName: "src/SearchParams.jsx",
-                    lineNumber: 85,
+                    lineNumber: 88,
                     columnNumber: 10
                 }, this)
             ]
@@ -23086,6 +23102,9 @@ function Result({ pets  }) {
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
             className: "search",
+            style: {
+                marginTop: "1rem"
+            },
             children: pets.map((anim)=>{
                 return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                     children: [
@@ -23151,7 +23170,6 @@ const Pet = ({ type , city , breed , description , image , name , state  })=>{
         className: "listOfPets",
         style: {
             backgroundColor: "white",
-            margin: "1em",
             padding: "0.5em",
             border: "solid 1px #ad343e",
             borderRadius: "7px"
@@ -23171,7 +23189,7 @@ const Pet = ({ type , city , breed , description , image , name , state  })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/Pet.jsx",
-                        lineNumber: 17,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
@@ -23183,7 +23201,7 @@ const Pet = ({ type , city , breed , description , image , name , state  })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/Pet.jsx",
-                        lineNumber: 25,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
@@ -23195,7 +23213,7 @@ const Pet = ({ type , city , breed , description , image , name , state  })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/Pet.jsx",
-                        lineNumber: 28,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
@@ -23205,7 +23223,7 @@ const Pet = ({ type , city , breed , description , image , name , state  })=>{
                         children: "Description:"
                     }, void 0, false, {
                         fileName: "src/Pet.jsx",
-                        lineNumber: 31,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h5", {
@@ -23215,13 +23233,13 @@ const Pet = ({ type , city , breed , description , image , name , state  })=>{
                         children: description
                     }, void 0, false, {
                         fileName: "src/Pet.jsx",
-                        lineNumber: 32,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Pet.jsx",
-                lineNumber: 16,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -23229,7 +23247,7 @@ const Pet = ({ type , city , breed , description , image , name , state  })=>{
                 className: "image"
             }, void 0, false, {
                 fileName: "src/Pet.jsx",
-                lineNumber: 35,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined)
         ]

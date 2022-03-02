@@ -7,13 +7,35 @@ import SearchParams from "./SearchParams";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Router>
-        <div id="nav_links">
-          <Link to="/">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            backgroundColor: "rgb(228, 225, 225)",
+            position: "fixed",
+            top: "0",
+            width: "100%",
+            margin: "0",
+          }}
+        >
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              marginLeft: "2rem",
+            }}
+          >
             <h1>Home</h1>
           </Link>
-          <Link to="details/:1">
+          <Link
+            to="details/:1"
+            style={{
+              marginLeft: "2rem",
+              textDecoration: "none",
+            }}
+          >
             <h1>History</h1>
           </Link>
         </div>
@@ -27,7 +49,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </>
   );
 };
 

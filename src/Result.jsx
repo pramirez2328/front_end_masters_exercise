@@ -8,7 +8,7 @@ function Result({ pets }) {
 
   return (
     <>
-      <div className="search">
+      <div className="search" style={{ marginTop: "1rem" }}>
         {pets.map((anim) => {
           return (
             <div key={`pet-${anim.id}`}>
